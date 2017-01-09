@@ -62,13 +62,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌪" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBF-oq-0Th">
-                                <rect key="frame" x="78.5" y="104" width="218" height="239"/>
+                                <rect key="frame" x="79" y="104" width="218" height="239"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="200"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a hurricane bitch!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thb-Bd-uX7">
-                                <rect key="frame" x="93.5" y="393" width="188" height="21"/>
+                                <rect key="frame" x="94" y="393" width="188" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Category: Natural Distasters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x63-z5-7Sq">
+                                <rect key="frame" x="80" y="434" width="217" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Birth Year: 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LM-DE-Z14">
+                                <rect key="frame" x="122" y="479" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,13 +88,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6LM-DE-Z14" firstAttribute="top" secondItem="x63-z5-7Sq" secondAttribute="bottom" constant="24" id="3An-Ui-zW4"/>
+                            <constraint firstItem="x63-z5-7Sq" firstAttribute="top" secondItem="Thb-Bd-uX7" secondAttribute="bottom" constant="20" id="9Ud-To-gSN"/>
                             <constraint firstItem="Thb-Bd-uX7" firstAttribute="top" secondItem="BBF-oq-0Th" secondAttribute="bottom" constant="50" id="L9b-Fb-VeJ"/>
                             <constraint firstItem="BBF-oq-0Th" firstAttribute="top" secondItem="tmC-xv-uYj" secondAttribute="bottom" constant="40" id="PVp-td-Dkc"/>
+                            <constraint firstItem="6LM-DE-Z14" firstAttribute="centerX" secondItem="L2U-Gd-WKJ" secondAttribute="centerX" id="Xqv-Tk-GMT"/>
+                            <constraint firstItem="x63-z5-7Sq" firstAttribute="centerX" secondItem="L2U-Gd-WKJ" secondAttribute="centerX" constant="14" id="aR1-Gc-RJL"/>
                             <constraint firstItem="BBF-oq-0Th" firstAttribute="centerX" secondItem="L2U-Gd-WKJ" secondAttribute="centerX" id="hUf-fM-vSq"/>
                             <constraint firstItem="Thb-Bd-uX7" firstAttribute="centerX" secondItem="L2U-Gd-WKJ" secondAttribute="centerX" id="o16-lz-zdw"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthYearLabel" destination="6LM-DE-Z14" id="ygB-x2-sif"/>
+                        <outlet property="categoryLabel" destination="x63-z5-7Sq" id="63Q-1e-PiV"/>
                         <outlet property="definitionLabel" destination="Thb-Bd-uX7" id="ziZ-1S-PVv"/>
                         <outlet property="emojiLabel" destination="BBF-oq-0Th" id="1GB-lP-3Dg"/>
                     </connections>
